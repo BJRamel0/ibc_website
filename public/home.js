@@ -81,3 +81,15 @@ eventsButton.addEventListener("click", function() {
     arrowIcon.style.transform = "rotate(0deg)";
   }
 });
+
+// Get the down caret element
+var downCaret = document.getElementById("downCaret");
+
+// Smooth scroll to the bottom of the image when down caret is clicked
+downCaret.addEventListener("click", function() {
+  var imageBottom = document.querySelector(".homeMainImage").getBoundingClientRect().bottom;
+  window.scrollTo({
+    top: imageBottom,
+    behavior: "smooth"
+  });
+});
