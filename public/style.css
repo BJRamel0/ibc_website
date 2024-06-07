@@ -25,7 +25,7 @@
   align-items: center; 
   justify-content: center;
   transition: font-size 0.7s ease, color 0.3s ease; 
-  font-size: 100%; 
+  font-size: 110%; 
   font-weight: 700;
   margin: 0; 
   color: black;
@@ -215,6 +215,10 @@ footer a { text-decoration: none; } /* Footer Links */
   margin: 30px;
 }
 
+.imageWrapper:hover h2 {
+  color: #075BA2; /* Change text color of h2 on hover */
+}
+
 .imageWrapper img {
   max-width: 100%;
   height: auto;
@@ -235,7 +239,7 @@ footer a { text-decoration: none; } /* Footer Links */
   background-color: #DDE8F0;
 }
 
-.homePageInstagram h2 {
+.homePageInstagram h1 {
   margin: 0; /* Reset margin to remove the space */
   padding: 20px 0; /* Add padding for spacing */
   font-weight: bold; /* Make the subtitle bold */
@@ -276,9 +280,8 @@ footer a { text-decoration: none; } /* Footer Links */
   padding: 5px 10px; /* Adjust padding */
   border-radius: 25px;
   font-weight: bold;
-  font-size: 25px; /* Adjust font size */
+  font-size: 15px; /* Adjust font size */
 }
-
 
 /* Hide mobileNav and overlay on screens larger than 449 pixels */
 @media (min-width: 450px) {
