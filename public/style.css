@@ -102,32 +102,68 @@ footer a { text-decoration: none; } /* Footer Links */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 30%;
-    background-color: #BAD5E8;
+    width: 225px;
+    height: 200x;
+    background-color: #DDE8F0;
     border-radius: 20px;
+    z-index: 998; /* Ensure the overlay appears above other content */
 }
-
-#moblieNavItems {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Horizontal alignment */
-    flex-direction: column; /* Align items vertically */
-}
-
 
 #mobileNav .moblie.w3-button,
 #eventsDropdownContentMobile .moblie a {
     padding: 10px !important;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 20px !important;
     font-weight: bold;
     width: 65%;
+    display: block;
+    margin: 10px auto; /* Add a little distance by adjusting the margin */
+    text-align: center; /* Center the text within the buttons */
+    z-index: 999;
 }
 
-.icon { display: none; }
+.moblie-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #BAD5E8;
+    z-index: 1;
+    width: 100%;
+    top: 100%;
+    border-radius: 0 0 5px 5px;
+}
 
+
+.icon { 
+    display: none; 
+    z-index: 999; /* Ensure the hamburger icon appears above other content */
+  }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 244, 244, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(2px); /* Apply blur effect with a lower value */
+    z-index: 900; /* Ensure the overlay appears above other content */
+    display: none; /* Initially hidden */
+}
+  
+#mobileEventsButton i.fa {
+    transition: transform 0.3s ease; /* Add transition effect to the rotation */
+}
+
+/* Hide mobileNav and overlay on screens larger than 449 pixels */
+@media (min-width: 450px) {
+    #mobileNav {
+      display: none !important;
+    }
+    #overlay {
+      display: none !important;
+    }
+}
+  
 /* Responsive Styles */
 @media (max-width: 450px) {
   .nav-link {

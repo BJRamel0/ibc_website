@@ -9,7 +9,7 @@
   <!-- Custom stylesheet -->
   <link href="style.css" rel="stylesheet">
 
-  <script src="./home.js" defer></script>
+  <script src="./ibcEvents.js" defer></script>
 
 </head>
 <body>
@@ -21,14 +21,14 @@
       <img src="./image/ibc-logo.png" alt="IBC Logo" class="logo-img">
     </a>
     <div class="websiteNav">
-      <a href='./home.html' class="w3-button w3-bar-item nav-link" style="color: #075BA2; background-color: #BAD5E8; border-radius: 5px;">Home</a>
+      <a href='./home.html' class="w3-button w3-bar-item nav-link">Home</a>
       <a href='./about.html' class="w3-button w3-bar-item nav-link">About</a>
       <a href='./clubs.html' class="w3-button w3-bar-item nav-link">Clubs</a>
       <div class="events-dropdown nav-link">
         <button class="w3-button w3-bar-item events-button">Events</button>
         <div class="dropdown-content" id="eventsDropdownContent">
           <a href="./clubEvents.html">Club</a>
-          <a href="./ibcEvents.html">IBC</a>
+          <a href="./ibcEvents.html" style="color: #075BA2; background-color: #BAD5E8; border-radius: 5px;">IBC</a>
         </div>
       </div>
     </div>
@@ -41,12 +41,12 @@
   <div id="overlay"></div>
 
   <nav id="mobileNav" class="w3-bar-block w3-hide">
-    <a href='./home.html' class="moblie w3-button w3-bar-item events-button" style="color: #075BA2 !important; background-color: #BAD5E8 !important;">Home</a>
+    <a href='./home.html' class="moblie w3-button w3-bar-item events-button">Home</a>
     <a href='./about.html' class="moblie w3-button w3-bar-item events-button">About</a>
     <a href='./clubs.html' class="moblie w3-button w3-bar-item events-button">Clubs</a>
     <button id="mobileEventsButton" class="moblie w3-button w3-bar-item events-button">Events <i class="fa fa-caret-down"></i></button>
     <a href='./clubEvents.html' class="moblie w3-button w3-bar-item events-button clubs-link" style="display: none;">Club</a>
-    <a href='./ibcEvents.html' class="moblie w3-button w3-bar-item events-button ibc-link" style="display: none;">IBC</a>
+    <a href='./ibcEvents.html' class="moblie w3-button w3-bar-item events-button ibc-link" style="display: none; color: #075BA2 !important; background-color: #BAD5E8 !important;">IBC</a>
   </nav>
 
   <!-- Footer -->

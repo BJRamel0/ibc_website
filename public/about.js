@@ -68,7 +68,7 @@ var arrowIcon = document.querySelector("#mobileEventsButton i.fa");
 
 // Add click event listener to the Events button
 eventsButton.addEventListener("click", function() {
-  // Toggle the display of IBC and Clubs links
+  // Toggle the display of IBC and Club links
   if (ibcLink.style.display === "none") {
     ibcLink.style.display = "block";
     clubsLink.style.display = "block";
