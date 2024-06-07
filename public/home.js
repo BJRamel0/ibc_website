@@ -66,6 +66,26 @@ var clubsLink = document.querySelector(".clubs-link");
 // Get the arrow icon element
 var arrowIcon = document.querySelector("#mobileEventsButton i.fa");
 
+// JavaScript code to set image source dynamically
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the image element
+  var mainImage = document.getElementById("mainImage");
+
+  // Set the image source dynamically
+  mainImage.src = "image/scd2018.jpg";
+
+  // Smooth scroll to the bottom of the image when down caret is clicked
+  var downCaret = document.getElementById("downCaret");
+  downCaret.addEventListener("click", function() {
+      var imageBottom = document.querySelector(".homeMainImage").getBoundingClientRect().bottom;
+      window.scrollTo({
+          top: imageBottom,
+          behavior: "smooth"
+      });
+  });
+});
+
+
 // Add click event listener to the Events button
 eventsButton.addEventListener("click", function() {
   // Toggle the display of IBC and Clubs links
