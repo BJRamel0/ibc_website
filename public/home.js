@@ -1,22 +1,32 @@
-function toggleNavMenu() {
-    var x = document.getElementById("mobileNav");
-    var overlay = document.getElementById("overlay");
-    if (x.className.indexOf("w3-show") == -1) {
+function toggleNavMenu(event) {
+  event.preventDefault(); // Prevent default link behavior
+  var x = document.getElementById("mobileNav");
+  var overlay = document.getElementById("overlay");
+  var hamburgerIcon = document.querySelector(".icon .fa-bars");
+  var xIcon = document.querySelector(".icon .fa-times");
+
+  if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
-      overlay.style.display = "block"; // Show the overlay
-    } else {
+      overlay.style.display = "block";
+      hamburgerIcon.style.display = "none"; // Hide hamburger icon
+      xIcon.style.display = "inline"; // Display x icon
+  } else {
       x.className = x.className.replace(" w3-show", "");
-      overlay.style.display = "none"; // Hide the overlay
-      
-      // Reset the display of IBC and Clubs links
-      var ibcLink = document.querySelector(".ibc-link");
-      var clubsLink = document.querySelector(".clubs-link");
-      var arrowIcon = document.querySelector("#mobileEventsButton i.fa");
-      ibcLink.style.display = "none";
-      clubsLink.style.display = "none";
-      arrowIcon.style.transform = "rotate(0deg)";
-    }
+      overlay.style.display = "none";
+      hamburgerIcon.style.display = "inline"; // Display hamburger icon
+      xIcon.style.display = "none"; // Hide x icon
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const overlay = document.getElementById("overlay");
+  const mobileNav = document.getElementById("mobileNav");
+
+  overlay.addEventListener("click", function() {
+      // Call toggleNavMenu to toggle the mobile navigation
+      toggleNavMenu(event); // pass event argument
+  });
+});
 
 // Add an event listener to the mobileEventsButton
 document.getElementById("mobileEventsButton").addEventListener("click", function() {
@@ -66,25 +76,25 @@ var clubsLink = document.querySelector(".clubs-link");
 // Get the arrow icon element
 var arrowIcon = document.querySelector("#mobileEventsButton i.fa");
 
-// JavaScript code to set image source dynamically
+// JavaScript code to set image source dynamically and handle scrolling
 document.addEventListener("DOMContentLoaded", function() {
-  // Get the image element
-  var mainImage = document.getElementById("mainImage");
-
   // Set the image source dynamically
+  var mainImage = document.getElementById("mainImage");
   mainImage.src = "image/scd2018.jpg";
 
   // Smooth scroll to the bottom of the image when down caret is clicked
   var downCaret = document.getElementById("downCaret");
   downCaret.addEventListener("click", function() {
-      var imageBottom = document.querySelector(".homeMainImage").getBoundingClientRect().bottom;
-      window.scrollTo({
-          top: imageBottom,
-          behavior: "smooth"
-      });
+    // Calculate the bottom position of the image relative to the viewport
+    var imageBottom = mainImage.getBoundingClientRect().bottom;
+
+    // Scroll to the bottom of the image
+    window.scrollTo({
+      top: window.scrollY + imageBottom,
+      behavior: "smooth"
+    });
   });
 });
-
 
 // Add click event listener to the Events button
 eventsButton.addEventListener("click", function() {
@@ -100,16 +110,4 @@ eventsButton.addEventListener("click", function() {
     // Rotate the arrow icon downwards
     arrowIcon.style.transform = "rotate(0deg)";
   }
-});
-
-// Get the down caret element
-var downCaret = document.getElementById("downCaret");
-
-// Smooth scroll to the bottom of the image when down caret is clicked
-downCaret.addEventListener("click", function() {
-  var imageBottom = document.querySelector(".homeMainImage").getBoundingClientRect().bottom;
-  window.scrollTo({
-    top: imageBottom,
-    behavior: "smooth"
-  });
 });

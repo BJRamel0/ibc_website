@@ -1,22 +1,33 @@
-function toggleNavMenu() {
-    var x = document.getElementById("mobileNav");
-    var overlay = document.getElementById("overlay");
-    if (x.className.indexOf("w3-show") == -1) {
+function toggleNavMenu(event) {
+  event.preventDefault(); // Prevent default link behavior
+  var x = document.getElementById("mobileNav");
+  var overlay = document.getElementById("overlay");
+  var hamburgerIcon = document.querySelector(".icon .fa-bars");
+  var xIcon = document.querySelector(".icon .fa-times");
+
+  if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
-      overlay.style.display = "block"; // Show the overlay
-    } else {
+      overlay.style.display = "block";
+      hamburgerIcon.style.display = "none"; // Hide hamburger icon
+      xIcon.style.display = "inline"; // Display x icon
+  } else {
       x.className = x.className.replace(" w3-show", "");
-      overlay.style.display = "none"; // Hide the overlay
-      
-      // Reset the display of IBC and Clubs links
-      var ibcLink = document.querySelector(".ibc-link");
-      var clubsLink = document.querySelector(".clubs-link");
-      var arrowIcon = document.querySelector("#mobileEventsButton i.fa");
-      ibcLink.style.display = "none";
-      clubsLink.style.display = "none";
-      arrowIcon.style.transform = "rotate(0deg)";
-    }
+      overlay.style.display = "none";
+      hamburgerIcon.style.display = "inline"; // Display hamburger icon
+      xIcon.style.display = "none"; // Hide x icon
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const overlay = document.getElementById("overlay");
+  const mobileNav = document.getElementById("mobileNav");
+
+  overlay.addEventListener("click", function() {
+      // Call toggleNavMenu to toggle the mobile navigation
+      toggleNavMenu(event); // pass event argument
+  });
+});
+
 
 // Add an event listener to the mobileEventsButton
 document.getElementById("mobileEventsButton").addEventListener("click", function() {
@@ -31,16 +42,6 @@ document.getElementById("mobileEventsButton").addEventListener("click", function
         dropdownContent.style.display = "block";
         arrowIcon.style.transform = "rotate(180deg)"; // Rotate the arrow to 180 degrees
     }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const overlay = document.getElementById("overlay");
-    const mobileNav = document.getElementById("mobileNav");
-
-    overlay.addEventListener("click", function() {
-        // Toggle the visibility of the mobile navigation
-        toggleNavMenu();
-    });
 });
 
 // Get the Events button element
@@ -81,3 +82,49 @@ eventsButton.addEventListener("click", function() {
     arrowIcon.style.transform = "rotate(0deg)";
   }
 });
+
+function toggleNavMenu(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var x = document.getElementById("mobileNav");
+    var overlay = document.getElementById("overlay");
+    var hamburgerIcon = document.querySelector(".icon .fa-bars");
+    var xIcon = document.querySelector(".icon .fa-times");
+
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        overlay.style.display = "block";
+        hamburgerIcon.style.display = "none"; // Hide hamburger icon
+        xIcon.style.display = "inline"; // Display x icon
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        overlay.style.display = "none";
+        hamburgerIcon.style.display = "inline"; // Display hamburger icon
+        xIcon.style.display = "none"; // Hide x icon
+    }
+}
+
+// JavaScript for toggling the fixed image on scroll
+window.addEventListener('scroll', function() {
+  var imageContainer = document.querySelector('.image-container');
+  var textContainer = document.querySelector('.text-container');
+  
+  // Check if window width is greater than 768px (desktop)
+  if (window.innerWidth > 768) {
+    if (window.scrollY > 50) {
+      imageContainer.classList.add('fixed');
+      textContainer.classList.add('shifted');
+    } else {
+      imageContainer.classList.remove('fixed');
+      textContainer.classList.remove('shifted');
+    }
+  }
+});
+
+document.querySelector('.button1').addEventListener('click', function() {
+  window.location.href = 'https://www.instagram.com/ibcmanoa/?hl=en';
+});
+
+document.querySelector('.button2').addEventListener('click', function() {
+  window.location.href = 'mailto:ibc@hawaii.edu';
+});
+

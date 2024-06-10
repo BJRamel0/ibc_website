@@ -1,156 +1,186 @@
 /* General Styles */
-.nav-container { padding: 5px; }
+.nav-container {
+  padding: 5px;
+}
 
 .logo-img {
-    width: 30px; 
-    height: auto;
+  width: 30px;
+  height: auto;
 }
 
 /* Navigation Bar */
 .increased-height {
-  height: 70px; 
-  display: flex; 
-  justify-content: space-between; 
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; 
-  background-color: #DDE8F0; 
+  padding: 10px 20px;
+  background-color: #DDE8F0;
   font-family: "Glacial Indifference", sans-serif;
-  border-top-left-radius: 20px; 
-  border-top-right-radius: 20px; 
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   overflow: visible;
 }
 
-.w3-button.w3-bar-item, .dropdown-content a {
-  display: flex; 
-  align-items: center; 
+.w3-button.w3-bar-item,
+.dropdown-content a {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  transition: font-size 0.7s ease, color 0.3s ease; 
-  font-size: 110%; 
+  transition: font-size 0.7s ease, color 0.3s ease;
+  font-size: 110%;
   font-weight: 700;
-  margin: 0; 
+  margin: 0;
   color: black;
-} /* Button and Dropdown Item Styles */
+}
 
-.w3-button.w3-bar-item:hover, .dropdown-content a:hover {
-  background-color: #BAD5E8 !important; 
-  color: #075BA2 !important; 
+/* Button and Dropdown Item Styles */
+.w3-button.w3-bar-item:hover,
+.dropdown-content a:hover {
+  background-color: #BAD5E8 !important;
+  color: #075BA2 !important;
   border-radius: 5px;
-} /* Button and Dropdown Item Hover Styles */
+}
 
-.events-dropdown { 
-    position: relative; 
-    display: flex; 
-    flex-direction: column; 
-} /* Events Dropdown Container */
+/* Button and Dropdown Item Hover Styles */
+.events-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
+/* Events Dropdown Container */
 .events-dropdown button.w3-bar-item,
 .dropdown-content a {
-  padding: 8px 15px; /* Adjust padding */
+  padding: 8px 15px;
 }
 
 .events-dropdown button.w3-bar-item:last-child,
 .dropdown-content a:last-child {
-  margin-right: 0; /* Remove margin for the last element */
+  margin-right: 0;
 }
 
+/* Remove margin for the last element */
 .dropdown-content {
-  display: none; 
-  position: absolute; 
-  background-color: #BAD5E8; 
+  display: none;
+  position: absolute;
+  background-color: #BAD5E8;
   z-index: 1;
-  top: 100%; 
-  width: 100%; 
+  top: 100%;
+  width: 100%;
   border-radius: 0 0 5px 5px;
-} /* Dropdown Content */
+}
 
-.events-button:hover, .events-dropdown:hover .events-button {
-  background-color: #BAD5E8 !important; 
+/* Dropdown Content */
+.events-button:hover,
+.events-dropdown:hover .events-button {
+  background-color: #BAD5E8 !important;
   border-radius: 5px 5px 0 0 !important;
-  color: #075BA2 !important; 
+  color: #075BA2 !important;
   text-decoration: underline !important;
-} /* Events Button Hover Styles */
+}
 
-.events-dropdown:hover .dropdown-content { display: block; } /* Show Dropdown Content on Hover */
+/* Events Button Hover Styles */
+.events-dropdown:hover .dropdown-content {
+  display: block;
+}
 
+/* Show Dropdown Content on Hover */
 /* Remove underlines from dropdown links */
-.dropdown-content a {
-    text-decoration: none;
-  }
 
-.w3-bar-item:first-child { margin: 0 auto 0 0; } /* First Bar Item (Logo) */
+.w3-bar-item:first-child {
+  margin: 0 auto 0 0;
+}
+
+/* First Bar Item (Logo) */
 
 /* Footer */
 footer {
-  background-color: #DDE8F0; 
+  background-color: #DDE8F0;
   border-radius: 0 0 20px 20px;
-  padding: 64px; 
-  text-align: center; 
+  padding: 64px;
+  text-align: center;
   font-size: x-large;
-} /* Footer Container */
+}
 
-footer p { font-size: x-small; } /* Footer Text */
-footer a { text-decoration: none; } /* Footer Links */
+/* Footer Container */
+footer p {
+  font-size: x-small;
+}
+
+/* Footer Text */
+footer a {
+  text-decoration: none;
+}
+
+/* Footer Links */
 
 /* Highlighted Link Styles */
 .highlighted {
-    background-color: #BBCED8; 
-    border-radius: 5px; 
-} /* Highlighted Links */
+  background-color: #BBCED8;
+  border-radius: 5px;
+}
 
+/* Highlighted Links */
+
+/* Mobile Navigation */
 #mobileNav {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 225px;
-    height: 200x;
-    background-color: #DDE8F0;
-    border-radius: 20px;
-    z-index: 998; /* Ensure the overlay appears above other content */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 225px;
+  height: 200x;
+  background-color: #DDE8F0;
+  border-radius: 20px;
+  z-index: 998;
 }
 
 #mobileNav .moblie.w3-button,
 #eventsDropdownContentMobile .moblie a {
-    padding: 10px !important;
-    background-color: white;
-    border-radius: 20px !important;
-    font-weight: bold;
-    width: 65%;
-    display: block;
-    margin: 10px auto; /* Add a little distance by adjusting the margin */
-    text-align: center; /* Center the text within the buttons */
-    z-index: 999;
+  padding: 10px !important;
+  background-color: white;
+  border-radius: 20px !important;
+  font-weight: bold;
+  width: 65%;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  z-index: 999;
 }
 
 .moblie-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #BAD5E8;
-    z-index: 1;
-    width: 100%;
-    top: 100%;
-    border-radius: 0 0 5px 5px;
+  display: none;
+  position: absolute;
+  background-color: #BAD5E8;
+  z-index: 1;
+  width: 100%;
+  top: 100%;
+  border-radius: 0 0 5px 5px;
 }
 
-.icon { 
-    display: none; 
-    z-index: 999; /* Ensure the hamburger icon appears above other content */
-  }
+.icon {
+  display: none;
+  z-index: 999;
+  text-decoration: none; /* Remove underline from anchor tags */
+}
+
+/* Initially hide the "x" icon */
+.icon .fa-times {
+  display: none;
+}
+
 
 #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(248, 244, 244, 0.5); /* Semi-transparent background */
-    backdrop-filter: blur(2px); /* Apply blur effect with a lower value */
-    z-index: 900; /* Ensure the overlay appears above other content */
-    display: none; /* Initially hidden */
-}
-  
-#mobileEventsButton i.fa {
-    transition: transform 0.3s ease; /* Add transition effect to the rotation */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(248, 244, 244, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 900;
+  display: none;
 }
 
 /* Home Page CSS */
@@ -189,60 +219,59 @@ footer a { text-decoration: none; } /* Footer Links */
 
 .homeDown-caret {
   position: absolute;
-  top: calc(91.9vh - 175px); /* Position 50px above the bottom of the screen */
+  top: calc(91.9vh - 175px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 50px; /* Adjust width of the down caret */
-  height: 50px; /* Adjust height of the down caret */
-  background-image: url('image/down-carrot.png'); /* Set the background image */
-  background-size: cover; /* Ensure the image covers the container */
+  width: 50px;
+  height: 50px;
+  background-image: url('image/down-carrot.png');
+  background-size: cover;
 }
 
 /* Home Main Pages Images */
 .homeStarterImages {
   display: flex;
-  flex-wrap: wrap; /* Allow image wrappers to wrap to the next line */
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #DDE8F0;
-  padding: 20px; /* Add padding to the container */
+  padding: 20px;
 }
 
 .imageWrapper {
-  flex: 0 0 calc(25% - 20px); /* Adjust the width of each image wrapper */
-  margin-bottom: 20px; /* Adjust margin between each image wrapper */
-  text-align: center; /* Center align text */
-  margin: 30px;
+  flex: 0 0 calc(25% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .imageWrapper:hover h2 {
-  color: #075BA2; /* Change text color of h2 on hover */
+  color: #075BA2;
 }
 
 .imageWrapper img {
   max-width: 100%;
   height: auto;
-  display: block; /* Ensure images are displayed as blocks */
-  border-radius: 30px; /* Add curved corners */
+  display: block;
+  border-radius: 30px;
 }
 
 .imageWrapper h2 {
-  font-weight: bold; /* Make the subtitle bold */
+  font-weight: bold;
 }
 
 .imageWrapper p {
-  margin-top: 5px; /* Adjust spacing between description and subtitle */
+  margin-top: 5px;
 }
 
 .homePageInstagram {
-  text-align: center; /* Center align content */
+  text-align: center;
   background-color: #DDE8F0;
 }
 
 .homePageInstagram h1 {
-  margin: 0; /* Reset margin to remove the space */
-  padding: 20px 0; /* Add padding for spacing */
-  font-weight: bold; /* Make the subtitle bold */
+  margin: 0;
+  padding: 20px 0;
+  font-weight: bold;
 }
 
 .instagramPosts {
@@ -253,11 +282,10 @@ footer a { text-decoration: none; } /* Footer Links */
 .instagram-post {
   position: relative;
   width: 30%;
-  margin-right: 100px; /* Reduce the margin between images */
 }
 
 .instagram-post:last-child {
-  margin-right: 0; /* Remove margin for the last image */
+  margin-right: 0;
 }
 
 .instagram-link {
@@ -267,8 +295,8 @@ footer a { text-decoration: none; } /* Footer Links */
 .instagram-image {
   width: 100%;
   height: auto;
-  max-width: 350px; /* Increase the maximum width of images */
-  border-radius: 30px; /* Add border-radius for curved corners */
+  max-width: 350px;
+  border-radius: 30px;
 }
 
 .instagram-overlay {
@@ -277,22 +305,22 @@ footer a { text-decoration: none; } /* Footer Links */
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px 10px; /* Adjust padding */
+  padding: 5px 10px;
   border-radius: 25px;
   font-weight: bold;
-  font-size: 15px; /* Adjust font size */
+  font-size: 15px;
 }
 
 /* Hide mobileNav and overlay on screens larger than 449 pixels */
 @media (min-width: 450px) {
-    #mobileNav {
-      display: none !important;
-    }
-    #overlay {
-      display: none !important;
-    }
+  #mobileNav {
+    display: none !important;
+  }
+  #overlay {
+    display: none !important;
+  }
 }
-  
+
 /* Responsive Styles */
 @media (max-width: 450px) {
   .nav-link {
@@ -305,34 +333,37 @@ footer a { text-decoration: none; } /* Footer Links */
     padding: 10px;
   }
   #mobileNav {
-    display: none; /* Hide by default on small screens */
+    display: none;
   }
   #mobileNav.w3-show {
     display: block;
   }
-  .websiteNav { display: none; }
+  .websiteNav {
+    display: none;
+  }
 }
 
 /* Media query for smaller screens */
 @media (max-width: 800px) {
   .homeStarterImages {
-    flex-direction: column; /* Change layout to vertical */
+    flex-direction: column;
   }
 
   .imageWrapper {
-    width: 100%; /* Make each image wrapper take full width */
-    margin-left: 0; /* Reset left margin */
-    margin-right: 0; /* Reset right margin */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .instagramPosts {
-    flex-direction: column; /* Change layout to vertical */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .instagram-post {
-    width: 100%; /* Make each post take full width */
-    margin-right: 0; /* Reset margin */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
+
