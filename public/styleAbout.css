@@ -212,7 +212,10 @@
     
     .secondaryHeader{
         font-size: 4.8vw; /* Adjust the font size for smaller screens */
-        padding: 0.5em 1em; /* Adjust padding if needed */
+    }
+
+    .boardSemester {
+        font-size: 3.4vw;
     }
 
     .overlay-buttons button {
