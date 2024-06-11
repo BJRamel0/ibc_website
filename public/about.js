@@ -130,7 +130,7 @@ document.querySelector('.button2').addEventListener('click', function() {
 
 document.addEventListener("DOMContentLoaded", async function() {
   try {
-      const response = await fetch('../ibcboard.json');
+      const response = await fetch('/ibcboard.json'); // Adjusted path to fetch the JSON file from the root directory
       const ibcboard = await response.json();
       
       const mainContent = document.querySelector('.ibcBoardContent'); // Use correct class selector
