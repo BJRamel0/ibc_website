@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('../ibcboard.json')
       .then(response => response.json())
       .then(ibcboard => {
-          const mainContent = document.querySelector('.ibcBoardContent');
+          const mainContent = document.querySelector('../ibcBoardContent');
 
           ibcboard.forEach(member => {
               const memberCard = document.createElement('div');
