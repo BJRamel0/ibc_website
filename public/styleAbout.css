@@ -43,7 +43,10 @@
     overflow-y: auto;
     margin-left: 8% !important;
     margin-right: 8% !important;
-    margin-top: 0; /* Fix the empty margin-top value */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    flex-direction: column; /* Stack the items vertically */
 }
 
 .overlay-text {
@@ -79,6 +82,7 @@
     width: 100%;
     box-sizing: border-box;
     font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow to the buttons */
 }
 
 .bottom-image {
@@ -142,19 +146,21 @@
 
 .boardSemester {
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 100%;
 }
 
 .member-card {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
     overflow: hidden;
     text-align: center;
     flex: 1 1 calc(25% - 16px); /* Reduced width for skinnier cards */
     min-width: 150px; /* Adjust minimum width as needed */
-    max-width: 25%; /* Ensure card does not exceed 25% width of the container */
+    max-width: 20%; /* Ensure card does not exceed 25% width of the container */
     margin: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: auto; /* Allow height to adjust based on content */
 }
@@ -162,15 +168,16 @@
 .member-card img {
     width: 100%;
     height: auto;
+    object-fit: cover !important; /* Zoom in more by covering the entire space */
 }
 
 .member-card .position {
     font-weight: bold;
-    padding: 8px 0;
+    padding-top: 15px;
 }
 
 .member-card .name {
-    padding: 8px 0;
+    padding-bottom: 15px;
 }
 
 @media (min-width: 751px) {
@@ -214,6 +221,7 @@
         font-size: 4.8vw; /* Adjust the font size for smaller screens */
         padding: 0.5em 1em; /* Adjust padding if needed */
         width: 67%; /* Adjust width if needed */
+        bottom: 94%;
     }
 
     .secondaryHeader {
