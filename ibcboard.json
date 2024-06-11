@@ -1,0 +1,32 @@
+[
+	{
+		"position": "President",
+		"name": "BJ Ramel",
+		"headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	},
+    {
+		"position": "Vice President",
+		"name": "Padme Madrigal",
+		"headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	},
+    {		
+        "position": "Secretary",
+        "name": "Jasmine Liberona",
+        "headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	},
+	{
+		"position": "Treasurer",
+		"name": "Karen Li",
+		"headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	},
+	{
+		"position": "Director of Business Night",
+		"name": "Kaedin Okimoto",
+		"headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	},
+	{
+		"position": "Director of Student Development",
+		"name": "지금 아무도...슬펐어",
+		"headshot": "../public/image/Bunch-of-bananas-67e91d5.jpg"
+	}
+]

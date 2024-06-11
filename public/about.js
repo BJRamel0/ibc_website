@@ -128,3 +128,34 @@ document.querySelector('.button2').addEventListener('click', function() {
   window.location.href = 'mailto:ibc@hawaii.edu';
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('../ibcboard.json')
+      .then(response => response.json())
+      .then(ibcboard => {
+          const mainContent = document.querySelector('.ibcBoardContent');
+
+          ibcboard.forEach(member => {
+              const memberCard = document.createElement('div');
+              memberCard.classList.add('member-card');
+
+              const img = document.createElement('img');
+              img.src = member.headshot;
+              img.alt = `${member.name}'s headshot`;
+
+              const position = document.createElement('div');
+              position.classList.add('position');
+              position.textContent = member.position;
+
+              const name = document.createElement('div');
+              name.classList.add('name');
+              name.textContent = member.name;
+
+              memberCard.appendChild(img);
+              memberCard.appendChild(position);
+              memberCard.appendChild(name);
+
+              mainContent.appendChild(memberCard);
+          });
+      })
+      .catch(error => console.error('Error fetching the JSON data:', error));
+});

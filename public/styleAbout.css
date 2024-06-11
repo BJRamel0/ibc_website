@@ -1,7 +1,11 @@
+.backgroundstylization{
+    background-color: #DDE8F0;
+}
+
 .main-content {
     display: flex;
     width: 100%;
-    background-color: #DDE8F0;
+    padding-bottom: 2%;
 }
 
 .content-container {
@@ -48,7 +52,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
     text-align: center;
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     font-weight: bold;
     background-color: #DDE8F0;
     padding: 0.5em 0em;
@@ -121,6 +125,66 @@
     color: inherit; /* Preserve the text color */
 }
 
+/*IBC Board Member Headshots and Info*/
+
+.ibcBoardContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.secondaryHeader {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5vw;
+    padding-top: 20px; /* Adjust the margin as needed */
+}
+
+.boardSemester {
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.member-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+    min-width: 200px;
+    margin: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+}
+
+.member-card .position {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.member-card .name {
+    padding: 8px 0;
+}
+
+@media (max-width: 768px) {
+    .member-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .member-card {
+        width: 90%;
+    }
+}
+
+
 @media (max-width: 700px) {
     .main-content {
         flex-direction: column; /* Change to a column layout for smaller screens */
@@ -140,10 +204,15 @@
         margin: 5% 0; /* Add some vertical margin */
     }
 
-    .overlay-text {
+    .overlay-text{
         font-size: 4.8vw; /* Adjust the font size for smaller screens */
         padding: 0.5em 1em; /* Adjust padding if needed */
         width: 67%; /* Adjust width if needed */
+    }
+    
+    .secondaryHeader{
+        font-size: 4.8vw; /* Adjust the font size for smaller screens */
+        padding: 0.5em 1em; /* Adjust padding if needed */
     }
 
     .overlay-buttons button {
