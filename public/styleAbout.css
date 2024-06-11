@@ -1,4 +1,4 @@
-.backgroundstylization{
+.backgroundstylization {
     background-color: #DDE8F0;
 }
 
@@ -43,7 +43,7 @@
     overflow-y: auto;
     margin-left: 8% !important;
     margin-right: 8% !important;
-    margin-top: px; /* Adjust this value to lower the container */
+    margin-top: 0; /* Fix the empty margin-top value */
 }
 
 .overlay-text {
@@ -112,7 +112,6 @@
     display: flex;
     align-items: center;
     margin-top: 0.8%; /* Adjust the margin as needed */
-    
 }
 
 .info-icon i {
@@ -125,7 +124,7 @@
     color: inherit; /* Preserve the text color */
 }
 
-/*IBC Board Member Headshots and Info*/
+/* IBC Board Member Headshots and Info */
 
 .ibcBoardContent {
     display: flex;
@@ -143,7 +142,7 @@
 
 .boardSemester {
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
 }
 
 .member-card {
@@ -152,10 +151,12 @@
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    width: 30%;
-    min-width: 200px;
+    flex: 1 1 calc(25% - 16px); /* Reduced width for skinnier cards */
+    min-width: 150px; /* Adjust minimum width as needed */
+    max-width: 25%; /* Ensure card does not exceed 25% width of the container */
     margin: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto; /* Allow height to adjust based on content */
 }
 
 .member-card img {
@@ -172,18 +173,23 @@
     padding: 8px 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 751px) {
     .member-card {
-        width: 45%;
+        flex: 1 1 calc(33.333% - 16px); /* 3 cards per row */
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 471px) and (max-width: 750px) {
     .member-card {
-        width: 90%;
+        flex: 1 1 calc(50% - 16px); /* 2 cards per row */
     }
 }
 
+@media (max-width: 470px) {
+    .member-card {
+        flex: 1 1 calc(100% - 16px); /* 1 card per row */
+    }
+}
 
 @media (max-width: 700px) {
     .main-content {
@@ -204,13 +210,13 @@
         margin: 5% 0; /* Add some vertical margin */
     }
 
-    .overlay-text{
+    .overlay-text {
         font-size: 4.8vw; /* Adjust the font size for smaller screens */
         padding: 0.5em 1em; /* Adjust padding if needed */
         width: 67%; /* Adjust width if needed */
     }
-    
-    .secondaryHeader{
+
+    .secondaryHeader {
         font-size: 4.8vw; /* Adjust the font size for smaller screens */
     }
 
